@@ -1,5 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.services-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.services-title{
+    font-family: Ruda;
+    font-size: 3rem;
+    text-align: center;
+}
+.services-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.service-card{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 30px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.service-card-title{
+    font-family: Ruda;
+    font-size: 3rem;
+}
+.service-list{
+    display: flex;
+    flex-direction: column;
+    font-family: Ruda;
+    margin-top: 50px;
+    padding-left: 0px;
+}
+.service-list li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 0;
+}
+.black-line{
+    background-color: black;
+    width: 20px;
+    height: 1px;
+    margin-right: 15px;
+}
+.service-card-price{
+    font-size: 3rem;
+    text-transform: lowercase;
+    font-family: Ruda;
+    text-align: center;
+}
+
 .steps{
     width: 100%;
+    font-family: Ruda;
 }
 
 .steps-wrapper{
@@ -23,7 +87,7 @@
     left: 19%;
     top: 38%;
     color: white;
-    font-family: Ruda;
+    font-family: "Ruda";
     font-style: normal;
     font-weight: bold;
     font-size: 26px;
@@ -81,6 +145,7 @@
 .question-wrapper__questions{
     display: flex;
     flex-wrap: wrap;
+    font-family: "Ruda";
 }
 
 .question-wrapper__questions p{
@@ -95,6 +160,7 @@
 
 .feedback{
     width: 100%;
+    font-family: Ruda;
 }
 
 .feedback-wrapper{
@@ -200,6 +266,9 @@ footer{
 }
 
 @media (max-width: 1250px) {
+    .services-wrapper {
+        width: 1000px;
+    }
     .steps-blocks img {
         max-width: 310px;
     }
@@ -219,7 +288,9 @@ footer{
 }
 
 @media (max-width: 1020px) {
-
+    .services-wrapper {
+        width: 760px;
+    }
     .steps-blocks:nth-child(3n-1) {
         margin-left: 0px;
         margin-right: 0px;
@@ -235,7 +306,21 @@ footer{
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+    .services-wrapper {
+        width: 440px;
+        /*background-color: black;*/
+    }
+    .services-cards{
+        grid-template-columns: 1fr;
+        grid-column-gap: 20px;
+    }
+    .service-card-title{
+        font-size: 2rem;
+    }
+    .service-card-price{
+        font-size: 2rem;
+    }
     .question-wrapper__logo img {
         max-width: 360px;
     }
@@ -289,4 +374,14 @@ footer{
     .question-wrapper__logo img {
         max-width: 300px;
     }
+}
+
+@media (max-width: 500px) {
+    .services-wrapper {
+        width: 95%;
+    }
+    .service-card{
+        padding: 0px 10px;
+    }
+
 }
